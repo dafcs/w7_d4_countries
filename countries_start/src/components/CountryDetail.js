@@ -5,8 +5,11 @@ const countryDetail = function({country}) {
 
 
     return (
-        <div className="country-detail">
+      <div className="country-details-container">
+        <div className='country-capital'>
         The capital of {country.name.common} is {country.capital}
+        </div>
+        
       </div>
     )
 

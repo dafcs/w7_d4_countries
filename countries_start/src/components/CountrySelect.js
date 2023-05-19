@@ -11,6 +11,8 @@ const CountrySelect = ({countries,onCountrySelected}) => {
         const country = countries.filter(country=> {
             if (country.cca2 === evt.target.value) {
                 return true
+            } else {
+                return false
             }
         })
         // console.log(evt.target.value)
@@ -19,13 +21,16 @@ const CountrySelect = ({countries,onCountrySelected}) => {
         // })
         // onCountrySelected(country)
         // console.log(`I selected ${country}`)
-        
+
         onCountrySelected(country[0])
         // console.log(country[0])
         
         //[countryobj]
     }
     
+    if (!countries.length) {
+        return null
+    }
 
     return (
   
