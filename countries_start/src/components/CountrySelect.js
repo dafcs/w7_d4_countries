@@ -15,18 +15,25 @@ const CountrySelect = ({countries,onCountrySelected}) => {
                 return false
             }
         })
-        // console.log(evt.target.value)
-        // const country = countries.filter(()=>{
+        onCountrySelected(country[0])
+    }
 
-        // })
+    // const onChange = function(event) {
+    //     const index = event.target.value
+    //     const country = countries[index]
+    //     onCountrySelected(country)
+    //     console.log(country)
+    //     console.log(index)
+    // }
+        // console.log(evt.target.value)
+
         // onCountrySelected(country)
         // console.log(`I selected ${country}`)
 
-        onCountrySelected(country[0])
+    
         // console.log(country[0])
         
-        //[countryobj]
-    }
+    // }
     
     if (!countries.length) {
         return null
@@ -39,7 +46,7 @@ const CountrySelect = ({countries,onCountrySelected}) => {
     </select>
   
     )
-  }
+}
 
 export default CountrySelect
 

@@ -1,11 +1,15 @@
 import React from 'react';
-import CountrySelect from '../components/CountrySelect'
 
-const CountryList = ({countries, onCountrySelected}) => {
+const CountryList = ({countries,onFavSelected}) => {
 
-    const CountryItems = countries.map((country, index) => {
-      return <CountrySelect country={country} key={index} onCountrySelect={onCountrySelected}/>
-    })
+  const handleClick = (country) => {
+    onFavSelected(country)
+  }
+
+  const CountryItems = countries.map((country, index) => {
+    return <p country={country} key={index}>{country.name.common}</p>
+
+  })
 
   return (
 
@@ -15,5 +19,5 @@ const CountryList = ({countries, onCountrySelected}) => {
 
   )
 }
-
+{/* <input key={index}  type='submit' value='remove' onClick={()=> handleClick(country)}/> */}
 export default CountryList;
